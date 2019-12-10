@@ -1,0 +1,89 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)">
+    <!-- 代', '姓名', '陪偶', '描述','父母', '子女' -->
+    <!-- ID Column -->
+    <ng-container matColumnDef="id"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[0]}} </th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[1]}} </th>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="wife">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[2]}} </th>
+      <td mat-cell *matCellDef="let row"> {{row.wife}}</td>
+    </ng-container>
+    <ng-container matColumnDef="desc">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[3]}} </th>
+      <td mat-cell *matCellDef="let row" > {{row.desc}} </td>
+    </ng-container>
+    <ng-container matColumnDef="parent">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[4]}} </th>
+      <td mat-cell *matCellDef="let row" > {{row.parent}} </td>
+    </ng-container>
+    <ng-container matColumnDef="children">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[5]}} </th>
+      <td mat-cell *matCellDef="let row" > {{row.children}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectRow(row)">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+<div>
+  <ul>
+    <li *ngFor="let pizza of piazzas$ | async">
+      {{pizza.name}}
+    </li> 
+    </ul> 
+</div>
+<div>
+    <ol>
+        <li>
+            <button mat-raised-button (click)="openDialog()">Pick one</button>
+            <button mat-raised-button (click)="createUser()">Pick one</button>
+            <button mat-raised-button (click)="deleteuser()">Pick one</button>
+            <button mat-raised-button (click)="updateUser()">Pick one</button>
+          </li>
+      </ol>
+</div>
+
+<!-- <div class="text-center">
+    <img src="./assets/img/md.jpg">
+    <img src="../assets/img/logo.png">
+    <img src="../../assets/img/logo.png">
+</div> -->
+
+<div>
+    <input #input (keydown.enter)="addPizza(input.value)" />
+    <hr /> 
+</div>
+<form [formGroup]="userDetailsForm" (ngSubmit)="onSubmitUserDetails(userDetailsForm.value)">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="id" formControlName="id" required>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <input matInput placeholder="name" formControlName="name" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+          <input matInput placeholder="wife" formControlName="wife" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="desc" formControlName="desc" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+              <input matInput placeholder="parent" formControlName="parent" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="children" formControlName="children" required>
+              </mat-form-field>
+	<button class="submit-btn" color="primary" mat-raised-button type="submit" [disabled]="!true">Submit</button>
+</form>

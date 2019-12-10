@@ -1,0 +1,28 @@
+<mat-tree [dataSource] = "dataSource" [treeControl] = "treeControl">
+        <mat-tree-node *matTreeNodeDef = "let node" matTreeNodeToggle matTreeNodePadding>
+           <button mat-icon-button disabled></button>
+           {{node.filename}} : {{node.type}}
+        </mat-tree-node>
+        <mat-tree-node *matTreeNodeDef = "let node;when: hasChild" matTreeNodePadding>
+           <button mat-icon-button matTreeNodeToggle [attr.aria-label] = "'toggle ' + node.filename">
+              <mat-icon class = "mat-icon-rtl-mirror">
+                 {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+           </button>
+           {{node.filename}}
+        </mat-tree-node>a
+</mat-tree>
+
+<!-- <cdk-tree-flat-example></cdk-tree-flat-example> -->
+<!-- Hello---------------------------------------------------------------------------- -->
+
+<!-- <button routerLink="/flat"> Button Go Flat</button> -->
+<!-- <button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();"><i class="fa fa-plus"></i> Add</button> -->
+
+
+<flatnode-component></flatnode-component>
+<tree-json></tree-json>
+<router-outlet></router-outlet>
+<!-- <app-pagenotfound></app-pagenotfound> -->
+<!-- <app-json></app-json> -->
+<!-- <router-outlet></router-outlet> -->

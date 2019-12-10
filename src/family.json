@@ -1,0 +1,6 @@
+{
+    "data": [
+        {"id":1, "name":"abc", "wife":"d", "desc":"ddd", "parent":"dddff", "children":"fffdd", "dynasty": "xihan","year": "1200"},
+        {"id":2, "name":"abc", "wife":"d", "desc":"ddd", "parent":"dddff", "children":"fffdd", "dynasty": "xihan","year": "1200"}
+    ]
+}
