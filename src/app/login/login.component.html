@@ -1,0 +1,96 @@
+<div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+  
+    <div class="card-body">
+      <form novalidate
+            (ngSubmit)="login(loginForm)"
+            #loginForm="ngForm"
+            autocomplete="off">
+        <fieldset>
+  
+          <div class="form-group row">
+            <label class="col-md-2 col-form-label"
+                   for="userNameId">真實的電話號碼</label>
+            <div class="col-md-8">
+              <input class="form-control"
+                     id="userNameId"
+                     type="text"
+                     placeholder="真實的電話號碼(必填))"
+                     minlength="10"
+                     maxlength='11'
+                     required
+                     ngModel
+                     name="userName"
+                     #userNameVar="ngModel"
+                     [ngClass]="{'is-invalid': (userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }" />
+              <span class="invalid-feedback">
+                <span *ngIf="userNameVar.errors?.required">
+                  必填.
+                </span>
+                <span *ngIf="userNameVar.errors?.minlength">
+                  要求填写真實的電話號碼.
+                </span>     
+                <span *ngIf="userNameVar.errors?.maxlength">
+                  要求填写真實的電話號碼.
+                </span>                            
+              </span>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label class="col-md-2 col-form--label"
+                   for="passwordId">密碼</label>
+  
+            <div class="col-md-8">
+              <input class="form-control"
+                     id="passwordId"
+                     type="password"
+                     placeholder="密碼 (必填)"
+                     minlength="8"
+                     maxlength='10'
+                     required
+                     ngModel
+                     name="password"
+                     #passwordVar="ngModel"
+                     [ngClass]="{'is-invalid': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid }" />
+              <span class="invalid-feedback">
+                <span *ngIf="passwordVar.errors?.required">
+                  要求填写8-10 字符的密碼.
+                </span>
+                <span *ngIf="passwordVar.errors?.minlength">
+                  要求填写8-10 字符的密碼.
+                </span>     
+                <span *ngIf="passwordVar.errors?.maxlength">
+                  要求填写8-10 字符的密碼.
+                </span>                  
+              </span>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-4 offset-md-2">
+              <button class="btn btn-primary mr-3"
+                      type="submit"
+                      style="width:80px"
+                      [disabled]="!loginForm.valid">
+                登錄
+              </button>
+              <button class="btn btn-outline-secondary"
+                      type="button"
+                      style="width:80px"
+                      [routerLink]="['/welcome']">
+                取消
+              </button>
+                        
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  
+    <div class="alert alert-danger"
+         *ngIf="errorMessage">{{errorMessage}}
+    </div>
+  </div>

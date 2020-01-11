@@ -1,0 +1,153 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    </button>
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>虞舜</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="簡介" formControlName="firstCtrl" >
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>下一個</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>（陈)胡妫满</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="secondCtrl" >
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>上一個</button>
+            <button mat-button matStepperNext>下一個</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>申公犀侯</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Address" formControlName="secondCtrl" >
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>上一個</button>
+              <button mat-button matStepperNext>下一個</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>靖庚</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Address" formControlName="secondCtrl" >
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>上一個</button>
+                <button mat-button matStepperNext>下一個</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>季子阍</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+            </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>仲牛甫</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+            </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>圣伯顺</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+            </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>伯他父</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+            </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>戴伯</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+            </mat-step>
+      <mat-step>                                        
+        <ng-template matStepLabel>郑叔</ng-template>
+        簡介
+        <div>
+          <button mat-button matStepperPrevious>上一個</button>
+          <button mat-button (click)="stepper.reset()">重設</button>
+        </div>
+      </mat-step>
+      <mat-step>                                        
+            <ng-template matStepLabel>郑仲金父</ng-template>
+            簡介
+            <div>
+              <button mat-button matStepperPrevious>上一個</button>
+              <button mat-button (click)="stepper.reset()">重設</button>
+            </div>
+          </mat-step>
+          <mat-step>                                        
+                <ng-template matStepLabel>庄伯爰</ng-template>
+                簡介
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button (click)="stepper.reset()">重設</button>
+                </div>
+              </mat-step>
+              <mat-step>                                        
+                    <ng-template matStepLabel>诸伯爰</ng-template>
+                    簡介
+                    <div>
+                      <button mat-button matStepperPrevious>上一個</button>
+                      <button mat-button (click)="stepper.reset()">重設</button>
+                    </div>
+                  </mat-step>
+                  <mat-step>                                        
+                        <ng-template matStepLabel>辕涛涂，涛涂改姓为辕</ng-template>
+                        簡介
+                        <div>
+                          <button mat-button matStepperPrevious>上一個</button>
+                          <button mat-button (click)="stepper.reset()">重設</button>
+                        </div>
+                      </mat-step>
+ 
+    </mat-vertical-stepper>
+  

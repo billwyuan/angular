@@ -1,0 +1,193 @@
+<div class="card">
+    <div class="card-header">
+      写下你要敬拜的先辈
+    </div>
+  
+    <div class="card-body">
+      <form novalidate
+            (ngSubmit)="save()"
+            [formGroup]="jingbaiForm">
+  
+        <div class="form-group">
+            <label class="col-md-8 col-form-label" for="huangdi">先辈的代表</label>
+          <div>
+            <input class="form-control"
+                   id="huangdiId"
+                   type="text"
+                   required
+                   value="黃帝炎帝"
+                   minlength="3"
+                   maxlength="30"
+                   formControlName="huangdi"
+                   [ngClass]="{'is-invalid': (jingbaiForm.get('huangdi').touched || jingbaiForm.get('huangdi').dirty) && !jingbaiForm.get('huangdi').valid }" />
+            <span class="invalid-feedback">
+              <span *ngIf="jingbaiForm.get('huangdi').errors?.required">
+                要求填写至少二字.
+              </span>
+              <span *ngIf="jingbaiForm.get('huangdi').errors?.maxlength">
+                要求填写至多三十字.
+              </span>
+            </span>
+          </div>
+        </div>
+  
+        <div class="form-group row mb-16">
+          <label class="col-md-8 col-form-label"
+                 for="shizu">袁氏始祖</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="shizuId"
+                   type="text"
+                   required
+                   value="袁固"
+                   minlength="3"
+                   maxlength="30"
+                   formControlName="shizu"
+                   [ngClass]="{'is-invalid': (jingbaiForm.get('shizu').touched || jingbaiForm.get('shizu').dirty) && !jingbaiForm.get('shizu').valid }" />
+            <span class="invalid-feedback">
+              <span *ngIf="jingbaiForm.get('shizu').errors?.required">
+                  要求填写至少二字.
+              </span>
+              <span *ngIf="jingbaiForm.get('shizu').errors?.maxlength">
+                要求填写至多三十字.
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="form-group row mb-16">
+            <label class="col-md-8 col-form-label"
+                   for="benzhiId">本支始迁祖</label>
+            <div class="col-md-8">
+              <input class="form-control"
+                     id="benzhiId"
+                     type="text"
+                     required
+                     value="本支始迁祖"
+                     minlength="3"
+                     maxlength="30"
+                     formControlName="benzhiId"
+                     [ngClass]="{'is-invalid': (jingbaiForm.get('benzhiId').touched || jingbaiForm.get('benzhiId').dirty) && !jingbaiForm.get('benzhiId').valid }" />
+              <span class="invalid-feedback">
+                <span *ngIf="jingbaiForm.get('benzhiId').errors?.required">
+                  要求填写至少二字.
+                </span>
+                <span *ngIf="jingbaiForm.get('benzhiId').errors?.maxlength">
+                  要求填写至多三十字.
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group row mb-16">
+              <label class="col-md-8 col-form-label"
+                     for="yeyeId">爷爷祖</label>
+              <div class="col-md-8">
+                <input class="form-control"
+                       id="yeyeId"
+                       type="text"
+                       required
+                       value="爺爺"
+                       minlength="3"
+                       maxlength="30"
+                       formControlName="yeye"
+                       [ngClass]="{'is-invalid': (jingbaiForm.get('yeye').touched || jingbaiForm.get('yeye').dirty) && !jingbaiForm.get('yeye').valid }" />
+                <span class="invalid-feedback">
+                  <span *ngIf="jingbaiForm.get('yeye').errors?.required">
+                    要求填写至少二字.
+                  </span>
+                  <span *ngIf="jingbaiForm.get('yeye').errors?.maxlength">
+                    要求填写至多三十字.
+                  </span>
+                </span>
+              </div>
+            </div>          
+            
+              <div class="form-group row mb-16">
+                  <label class="col-md-8 col-form-label"
+                         for="fubeiId">父親辈</label>
+                  <div class="col-md-8">
+                    <input class="form-control"
+                           id="fubeiId"
+                           type="text"
+                           required
+                           value="父辈"
+                           minlength="3"
+                           maxlength="30"
+                           formControlName="fubei"
+                           [ngClass]="{'is-invalid': (jingbaiForm.get('fubei').touched || jingbaiForm.get('fubei').dirty) && !jingbaiForm.get('fubei').valid }" />
+                    <span class="invalid-feedback">
+                      <span *ngIf="jingbaiForm.get('fubei').errors?.required">
+                        要求填写至少二字.
+                      </span>
+                      <span *ngIf="jingbaiForm.get('fubei').errors?.maxlength">
+                        要求填写至多三十字.
+                      </span>
+                    </span>
+                  </div>
+                </div> 
+                <div class="form-group row mb-16">
+                    <label class="col-md-8 col-form-label"
+                           for="pingbeiId">平辈子</label>
+                    <div class="col-md-8">
+                      <input class="form-control"
+                             id="pingbeiId"
+                             type="text"
+                             required
+                             value="平辈"
+                             minlength="3"
+                             maxlength="30"
+                             formControlName="pinbei"
+                             [ngClass]="{'is-invalid': (jingbaiForm.get('pinbei').touched || jingbaiForm.get('pinbei').dirty) && !jingbaiForm.get('pinbei').valid }" />
+                      <span class="invalid-feedback">
+                        <span *ngIf="jingbaiForm.get('pinbei').errors?.required">
+                          要求填写至少二字.
+                        </span>
+                        <span *ngIf="jingbaiForm.get('pinbei').errors?.maxlength">
+                          要求填写至多三十字.
+                        </span>
+                      </span>
+                    </div>
+                  </div> 
+                 
+                  <div class="form-group row mb-16">
+                      <label class="col-md-8 col-form-label"
+                             for="xiaobeiId">小辈子</label>
+                      <div class="col-md-8">
+                        <input class="form-control"
+                               id="xiaobeiiId"
+                               type="text"
+                               required
+                               value="小辈"
+                               minlength="3"
+                               maxlength="30"
+                               formControlName="xiaobei"
+                               [ngClass]="{'is-invalid': (jingbaiForm.get('xiaobei').touched || jingbaiForm.get('xiaobei').dirty) && !jingbaiForm.get('xiaobei').valid }" />
+                        <span class="invalid-feedback">
+                          <span *ngIf="jingbaiForm.get('xiaobei').errors?.required">
+                              要求填写至少二字.
+                          </span>
+                          <span *ngIf="jingbaiForm.get('xiaobei').errors?.maxlength">
+                            要求填写至多三十字.
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+  
+        <div class="form-group row mb-16">
+          <div class="offset-md-4 col-md-8">
+            <button class="btn btn-primary mr-3"
+                    type="submit"
+                    style="width:200px"
+                    [title]="jingbaiForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                    [disabled]="!jingbaiForm.valid">
+              Save {{jingbaiForm.valid}}
+            </button>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+      <router-outlet></router-outlet>
+    </div>

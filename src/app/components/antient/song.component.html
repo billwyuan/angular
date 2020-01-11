@@ -1,0 +1,282 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="输入搜索词">
+</mat-form-field>
+
+<div class="mat-elevation-z8" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)">
+    <!-- 代', '姓名', '陪偶', '描述','父母', '子女' -->
+    <!-- ID Column -->
+    <div flex="1">
+        <ng-container matColumnDef="0" flex="60px"> 
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[0]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a1}} </td>
+            
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="1" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[1]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a2}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="2" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[2]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a3}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="3" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[3]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a4}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="4" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[4]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a5}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="5" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[5]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a6}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="6" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[6]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a7}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="7" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[7]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a8}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="8" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[8]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a9}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="9" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[9]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a10}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="10" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[10]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a11}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="11" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[11]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a12}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="12" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[12]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a13}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="13" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[13]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a14}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="14" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[14]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a15}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="15" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[15]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a16}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="16" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[16]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a17}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="17" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[17]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a18}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="18" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[18]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a19}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="19" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[19]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a20}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="20" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[20]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a21}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="21" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[21]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a22}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="22" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[22]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a23}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="23" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[23]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a24}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="24" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[24]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a25}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="25" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[25]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a26}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="26" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[26]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a27}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="27" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[27]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a28}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="28" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[28]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a29}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="29" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[29]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a30}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="30" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[30]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a31}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="31" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[31]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a32}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="32" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[32]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a33}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="33" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[33]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a34}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="34" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[34]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a35}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="35" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[35]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a36}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="36" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[36]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a37}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="37" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[37]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a38}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="38" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[38]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a39}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="39" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[39]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a40}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="40" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[40]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a41}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="41" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[41]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a42}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="42" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[42]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a43}} </td>
+          </ng-container>
+    </div>
+    <div flex="5">
+        <ng-container matColumnDef="43" flex="5">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{displayedColumnsNames[43]}} </th>
+            <td mat-cell *matCellDef="let row"> {{row.a44}} </td>
+          </ng-container>
+    </div>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectRow(row)">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+

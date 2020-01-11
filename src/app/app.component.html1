@@ -1,0 +1,23 @@
+<mat-tab-group selectedIndex=2>
+  <mat-tab isActive=false label="袁氏起源(先古--汉)">
+    <app-antient></app-antient>
+  </mat-tab>
+  <mat-tab label="本支袁氏一世祖到二十一世至南北朝(汉--)">
+    <app-gen1></app-gen1>
+  </mat-tab>
+  <mat-tab label="本支袁氏南北朝--南宋以前的袁氏辈(420--)">
+    <tree-json></tree-json>
+  </mat-tab>
+  <mat-tab label="本支袁氏南宋到明初当地袁氏始祖辈(1302--)">
+      <app-yuanzhongxian></app-yuanzhongxian>
+    </mat-tab>
+  <mat-tab label="所有袁氏寻找字辈">
+    <table-overview-example></table-overview-example>
+  </mat-tab>
+
+  <mat-tab isActive=true label="敬拜灵位">
+    <app-jingbai></app-jingbai>
+  </mat-tab>
+
+
+</mat-tab-group>

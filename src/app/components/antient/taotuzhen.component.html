@@ -1,0 +1,101 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    </button>
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>辕涛涂(又名辕宣仲)</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="簡介" formControlName="firstCtrl" >
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>下一個</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>辕选</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="secondCtrl" >
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>上一個</button>
+            <button mat-button matStepperNext>下一個</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>辕突</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Address" formControlName="secondCtrl" >
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>上一個</button>
+              <button mat-button matStepperNext>下一個</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>辕惠</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Address" formControlName="secondCtrl" >
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>上一個</button>
+                <button mat-button matStepperNext>下一個</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>辕雅</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+            </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>辕颇, 辕颇之少子袁政，真正立“袁”为姓氏，袁政为第一人</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+            </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>辕政，真正立“袁”为姓氏，袁政为第一人</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+          </mat-step>
+
+          <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>袁固为一世祖,后裔从发祥地山西南部迁到汝南</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" >
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>上一個</button>
+                  <button mat-button matStepperNext>下一個</button>
+                </div>
+              </form>
+          </mat-step>          
+    </mat-vertical-stepper>
+  

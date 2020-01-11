@@ -1,0 +1,34 @@
+import { Component, OnInit } from '@angular/core';
+import { PolicyService } from './data/policy.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {DialogExample} from './../app/components/dialog/dialog-example';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+  policies: any[] = [];
+  constructor(private policyService: PolicyService,  public dialog: MatDialog) { }
+
+  ngOnInit() {
+    this.policyService.getPolicies().subscribe((data : any[])=>{
+      console.log(data);
+      this.policies = data;
+      // this.openDialogSingle();
+  })
+  }
+  openDialogSingle(): void {
+    const dialogRef = this.dialog.open(DialogExample, {
+        width: '400px',
+        
+    });
+    
+    dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed：',result);
+        // users = [];
+        // this.dataSource = new MatTableDataSource(users);
+    });
+}
+
+}
